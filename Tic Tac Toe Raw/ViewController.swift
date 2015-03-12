@@ -279,7 +279,6 @@ class ViewController: UIViewController {
         let xSign = gameElements[0].name
         let oSign = gameElements[1].name
         
-
             
         if topHoriz.count == 3 {
             
@@ -287,7 +286,8 @@ class ViewController: UIViewController {
             showAlertWithText()
             resetTheGame()
                 
-            } else if topHoriz[0].name == oSign && topHoriz[1].name == oSign && topHoriz[2].name == oSign {
+            }
+            else if topHoriz[0].name == oSign && topHoriz[1].name == oSign && topHoriz[2].name == oSign {
             showAlertWithText()
             resetTheGame()
             }
@@ -300,7 +300,8 @@ class ViewController: UIViewController {
             showAlertWithText()
             resetTheGame()
             
-            } else if midHoriz[0].name == oSign && midHoriz[1].name == oSign && midHoriz[2].name == oSign {
+            }
+             else if midHoriz[0].name == oSign && midHoriz[1].name == oSign && midHoriz[2].name == oSign {
             showAlertWithText()
             resetTheGame()
             }
@@ -313,31 +314,36 @@ class ViewController: UIViewController {
             showAlertWithText()
             resetTheGame()
                 
-            } else if bottomHoriz[0].name == oSign && bottomHoriz[1].name == oSign && bottomHoriz[2].name == oSign {
+            }
+            else if bottomHoriz[0].name == oSign && bottomHoriz[1].name == oSign && bottomHoriz[2].name == oSign {
             showAlertWithText()
             resetTheGame()
+            }
             
         }
             
         if rightVert.count == 3 {
                 
-            } else if rightVert[0].name == xSign && rightVert[1].name == xSign && rightVert[2].name == xSign {
+            if rightVert[0].name == xSign && rightVert[1].name == xSign && rightVert[2].name == xSign {
             showAlertWithText()
             resetTheGame()
                 
-            } else if rightVert[0].name == oSign && rightVert[1].name == oSign && rightVert[2].name == oSign {
+            }
+            else if rightVert[0].name == oSign && rightVert[1].name == oSign && rightVert[2].name == oSign {
             showAlertWithText()
             resetTheGame()
-            
+            }
+        
         }
-            
+
         if midVert.count == 3 {
                 
             if midVert[0].name == xSign && midVert[1].name == xSign && midVert[2].name == xSign {
             showAlertWithText()
             resetTheGame()
                 
-            } else if midVert[0].name == oSign && midVert[1].name == oSign && midVert[2].name == oSign {
+            }
+            else if midVert[0].name == oSign && midVert[1].name == oSign && midVert[2].name == oSign {
             showAlertWithText()
             resetTheGame()
             }
@@ -350,7 +356,8 @@ class ViewController: UIViewController {
             showAlertWithText()
             resetTheGame()
                 
-            } else if leftVert[0].name == oSign && leftVert[1].name == oSign && leftVert[2].name == oSign {
+            }
+            else if leftVert[0].name == oSign && leftVert[1].name == oSign && leftVert[2].name == oSign {
             showAlertWithText()
             resetTheGame()
             }
@@ -363,7 +370,8 @@ class ViewController: UIViewController {
             showAlertWithText()
             resetTheGame()
                 
-            } else if rightDiag[0].name == oSign && rightDiag[1].name == oSign && rightDiag[2].name == oSign {
+            }
+            else if rightDiag[0].name == oSign && rightDiag[1].name == oSign && rightDiag[2].name == oSign {
             showAlertWithText()
             resetTheGame()
             }
@@ -376,18 +384,20 @@ class ViewController: UIViewController {
             showAlertWithText()
             resetTheGame()
                 
-            } else if leftDiag[0].name == oSign && leftDiag[1].name == oSign && leftDiag[2].name == oSign {
+            }
+            else if leftDiag[0].name == oSign && leftDiag[1].name == oSign && leftDiag[2].name == oSign {
             showAlertWithText()
             resetTheGame()
                 }
             }
-        }
+
 
        if allElements.count == 9 {
             showAlertWithText(header: "Tie!")
             resetTheGame()
         }
-}
+    }
+
 
     func showAlertWithText(header : String = "You Won!", message : String = "Restart the Game?") {
         var alert = UIAlertController(title: header, message: message, preferredStyle: UIAlertControllerStyle.Alert)
@@ -420,6 +430,6 @@ class ViewController: UIViewController {
         
         playersTurn = true
     }
-    }
 
+}
 
